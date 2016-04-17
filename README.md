@@ -58,7 +58,7 @@ http://api.c4w.jp/api/v1/pages.json
 
 ## 仕組み
 
-* GitHubにマークダウンファイルを投稿すると、[Travis CI](https://travis-ci.org/)が発火して自動的にJSON APIが[gh-pages](https://github.com/c4w/disaster-information/tree/gh-pages)ブランチに生成されます。
+* GitHubにマークダウンファイルを投稿すると、[Travis CIが発火](https://travis-ci.org/c4w/disaster-information)して自動的にJSON APIが[gh-pages](https://github.com/c4w/disaster-information/tree/gh-pages)ブランチに生成されます。
 * JSONを生成するには、[Jekyll](https://jekyllrb.com/)と、アメリカ政府内の機関[18F](https://18f.gsa.gov/)が開発した[jekyll_pages_api](https://github.com/18F/jekyll_pages_api)というJekyllプラグインを使用しています。
 
 ## マークダウンフォーマットの例
