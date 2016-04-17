@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.0.0
+branches:
+  only:
+  - master
+before_script: bash ./bin/prepare.sh
+script:
+- ls -al api/v1/pages.json
+- cat api/v1/pages.json | jq .
+after_success: bash ./bin/deploy.sh
+env:
+  global:
+  - GH_REF: github.com/c4w/disaster-information.git
+  - secure: Fo2lI28aLT/T2iOtJTqquOt+NuBQMXnGC6yuqqV61NqF4Opmwi3U+4lEY4V6gAcs8h+R3CKTnFsfFBUYWQO9Ng3BT+ITsCz6GRYR5OTkt8IqJ0L9txa5EFKtlCFjgQvWEvgoMhAEioxgJlYJKuZaBbUVdtaFJQVW+ItAm6JHN9A1WH8MKpOzitKziy17+BrEPmKgD971zbfUamXh4bW9nvqMpLDHR7UbdmncwqWDNBWdaZNfN49gIGnpIR3gWNs5rwhWuBeQ2P0ldGABwMjStJT3AaxhtJPYRjHB6WE4te7PixvlB+JlHIOXeTb0KLpRFHx9ur5xlSzTLFgNVK8KLK5pZMm+T04rpeiIOvyYq0Qgw1u6RYnnJxwXm/m3d0wwrue6tvHLWe0NYLGufL7tpcy0GCyS57BV0zwuU4O5n5k1WUdHsrd1NNCK9my9/toFn4QlwDkodf13WkB4yUv7KOnO6sakgde2ZfmIXvshwa3ccIP00OEBRAZUA51ta9Vk+pGMwf1RaeKLE9kb6WqxNmwAMZY3VG1LFFeRCAJd8qTh8fnleRW3nj02rT4j7SekcUMVL/ONH0dYoWxTFlFhyGcfP6RhudIL8lh5woMr2VcX/adC+jffSNzAPQumIhW8AUAzjEhD4yb4i71Dv07tpVGg1AwMjm9nPAB0Jqk1mDo=

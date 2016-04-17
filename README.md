@@ -1,5 +1,7 @@
 # Open Disaster Information Project
 
+[![Build Status](https://travis-ci.org/c4w/disaster-information.svg?branch=master)](https://travis-ci.org/c4w/disaster-information)
+
 このプロジェクトは災害情報を配信するための実験的なプロジェクトです。
 
 このプロジェクトは以下のことを目的としています。
