@@ -1,7 +1,8 @@
-_site
-.sass-cache
+.bundle
 .jekyll-metadata
-vendor
+.sass-cache
+_site
 lib
 node_modules
 npm-debug.log
+vendor
