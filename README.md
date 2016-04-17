@@ -27,7 +27,7 @@
 
 ## APIのエンドポイント
 
-http://c4w.github.io/disaster-information/api/v1/pages.json
+http://api.c4w.jp/api/v1/pages.json
 
 ## APIの出力例
 
