@@ -84,7 +84,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
   * 和歌山県や国土地理院などGitHubアカウントを持っている政府機関や自治体はすでにある。
   * GitHub上であればブラウザ上の操作だけで情報の追加が可能
 * GitHubに依存することにネガティブな意見があるかもしれない。
-  * オープンな技術を使っているので、他にも代替可能なサービスや手段はあり依存してるわけではない。
+  * オープンな技術を使っているので、他にも代替可能なサービスや手段はあり、必要以上に依存してるわけではない。
 
 その他、いろいろあるかもですが、ご意見やご感想は[Issue](https://github.com/c4w/disaster-information/issues)でどうぞ。
 
