@@ -78,3 +78,23 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 * GitHubに依存するのはどうよ？（とりあえず独自ドメインを割り当てて運用し、将来独自のインフラに移行することも可能）
 
 その他、いろいろあるかもですが、ご意見やご感想は[Issue](https://github.com/c4w/disaster-information/issues)でどうぞ。
+
+## 開発
+
+```
+$ git clone git@github.com:c4w/disaster-information.git
+$ cd disaster-information
+$ bundle install --path vendor/bundle
+```
+
+Then:
+
+```
+$ bundle exec jekyll serve
+```
+
+Or
+
+```
+$ bundle exec jekyll build
+```
