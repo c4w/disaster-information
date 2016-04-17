@@ -1,4 +1,4 @@
-# Open Disaster Information Project
+# GitHubページを使った災害情報配信用のJSON API
 
 [![Build Status](https://travis-ci.org/c4w/disaster-information.svg?branch=master)](https://travis-ci.org/c4w/disaster-information)
 
