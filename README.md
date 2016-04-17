@@ -70,12 +70,16 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 ```
 
-## 既知の問題
+## 問題点
 
-* Travis CIによってJSONが生成されるまでに数分かかりますが、Travis CIの有料アカウントを使用するか、例えばAWS Lambda等の別のインフラを使用することで解決できると思います。
-* マークダウンの学習コストが高い？
-* そもそもGitの学習コストが高い？（和歌山県など自治体での導入事例は既にあるので問題ないと思われる。）
-* GitHubに依存するのはどうよ？（とりあえず独自ドメインを割り当てて運用し、将来独自のインフラに移行することも可能）
+* Travis CIによってJSONが生成されるまでに数分かかる。
+  * デスクトップで生成してgh-pagesにpushすることも可能
+* マークダウンの学習コストが高いかも。
+* そもそもGitの学習コストが高いかも。
+  * 和歌山県や国土地理院などGitHubアカウントを持っている政府機関や自治体はすでにある。
+  * GitHub上であればブラウザ上の操作だけで情報の追加が可能
+* GitHubに依存することにネガティブな意見があるかもしれない。
+  * オープンな技術を使っているので、他にも代替可能なサービスや手段はあり依存してるわけではない。
 
 その他、いろいろあるかもですが、ご意見やご感想は[Issue](https://github.com/c4w/disaster-information/issues)でどうぞ。
 
