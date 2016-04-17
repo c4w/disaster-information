@@ -48,7 +48,7 @@ http://c4w.github.io/disaster-information/api/v1/pages.json
 
 ## 運用方法
 
-1. このリポジトリの`master`ブランチの[_posts](https://github.com/c4w/disaster-information/tree/master/_posts)ディレクトリ内にJekyllの記事と同じフォーマット（マークダウン）でテクストファイルをpushしてください。
+1. このリポジトリの`master`ブランチの[_posts](https://github.com/c4w/disaster-information/tree/master/_posts)ディレクトリ内に[Jekyllの記事と同じフォーマット（.md）のファイル](https://github.com/c4w/disaster-information/blob/master/_posts/2016-04-18-example.md)をpushしてください。
 2. `master`ブランチに変更が加わるとTravis CIによって自動的にAPIとして利用可能なJSONファイルが生成されます。（ただし生成されるまでに数分かかります。）
 
 ## 仕組み
