@@ -6,8 +6,8 @@ branches:
   - master
 before_script: bash ./bin/prepare.sh
 script:
-- ls -al api/v1/pages.json
-- cat api/v1/pages.json | jq .
+- ls -al _site/api/v1/pages.json
+- cat _site/api/v1/pages.json | jq .
 after_success: bash ./bin/deploy.sh
 env:
   global:
