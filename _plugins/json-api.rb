@@ -6,6 +6,10 @@ module JekyllPagesApi
     def lang
       (self.page.data['lang'] if self.page.respond_to?(:data)) || "ja"
     end
+    def meta
+      p self.page.data['meta']
+      (self.page.data['meta'] if self.page.respond_to?(:data)) || []
+    end
     def to_json
       optional = {}
       optional['skip_index'] = true if self.skip_index?
@@ -15,6 +19,7 @@ module JekyllPagesApi
         url: self.url,
         tags: self.tags,
         lang: self.lang,
+        meta: self.meta,
         body: self.body_text
       })
     end
