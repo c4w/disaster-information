@@ -58,7 +58,14 @@ module JekyllPagesApi
     end
 
     def jsons
-      jsons = []
+      locale = PageWithoutAFile.new(site,
+                                    File.dirname(__FILE__),
+                                    dest_dir,
+                                    'locale.json')
+      locale.output = langs.to_json
+
+      jsons = [locale]
+
       langs.each do |l|
         json = PageWithoutAFile.new(site,
                                     File.dirname(__FILE__),
@@ -67,6 +74,7 @@ module JekyllPagesApi
         json.output = data[l].to_json
         jsons << json
       end
+
       jsons
     end
 
