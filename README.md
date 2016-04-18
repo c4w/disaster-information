@@ -29,7 +29,13 @@
 
 ## APIのエンドポイント
 
-http://api.c4w.jp/api/v1/pages.json
+* 言語一覧
+  * http://api.c4w.jp/api/v1/locale.json
+* 言語別
+  * 上記言語一覧に掲載されている各言語ごとのエンドポイント
+  * 例：
+    * 日本語(ja)： http://api.c4w.jp/api/v1/ja.json
+    * 英語(en)： http://api.c4w.jp/api/v1/en.json
 
 ## APIの出力例
 
