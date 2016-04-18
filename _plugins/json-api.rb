@@ -8,7 +8,7 @@ module JekyllPagesApi
     end
     def meta
       p self.page.data['meta']
-      (self.page.data['meta'] if self.page.respond_to?(:data)) || {}
+      (self.page.data['meta'] if self.page.respond_to?(:data)) || []
     end
     def to_json
       optional = {}
