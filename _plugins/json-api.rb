@@ -31,13 +31,49 @@ module JekyllPagesApi
       })
     end
   end
-  # class Generator
-  #   def page
-  #     # based on https://github.com/jekyll/jekyll-sitemap/blob/v0.7.0/lib/jekyll-sitemap.rb#L51-L54
-  #     page = PageWithoutAFile.new(self.site, File.dirname(__FILE__), self.dest_dir, 'ja.json')
-  #     p self.data
-  #     page.output = self.data.to_json
-  #     page
-  #   end
-  # end
+
+  class Generator
+    def langs
+      langs = []
+      pages_data.each do |d|
+        langs << d[:lang]
+      end
+      langs.uniq
+    end
+
+    def data
+      data = {}
+
+      langs.each do |l|
+        data[l] = {
+          entries: []
+        }
+      end
+
+      pages_data.each do |d|
+        data[d[:lang]][:entries] << d
+      end
+
+      data
+    end
+
+    def jsons
+      jsons = []
+      langs.each do |l|
+        json = PageWithoutAFile.new(site,
+                                    File.dirname(__FILE__),
+                                    dest_dir,
+                                    "#{l}.json")
+        json.output = data[l].to_json
+        jsons << json
+      end
+      jsons
+    end
+
+    def generate
+      jsons.each do |j|
+        site.pages << j
+      end
+    end
+  end
 end
