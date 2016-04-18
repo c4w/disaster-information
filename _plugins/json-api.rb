@@ -3,12 +3,20 @@ module JekyllPagesApi
     def date
       (self.page.data['date'] if self.page.respond_to?(:data)) || ""
     end
+
     def lang
       (self.page.data['lang'] if self.page.respond_to?(:data)) || "ja"
     end
+
     def meta
       (self.page.data['meta'] if self.page.respond_to?(:data)) || []
     end
+
+    def body_text
+      output = self.page.content if self.page.respond_to?(:content)
+      output ||= File.read(self.page.path)
+    end
+
     def to_json
       optional = {}
       optional['skip_index'] = true if self.skip_index?
