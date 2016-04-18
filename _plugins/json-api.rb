@@ -7,7 +7,6 @@ module JekyllPagesApi
       (self.page.data['lang'] if self.page.respond_to?(:data)) || "ja"
     end
     def meta
-      p self.page.data['meta']
       (self.page.data['meta'] if self.page.respond_to?(:data)) || []
     end
     def to_json
