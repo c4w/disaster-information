@@ -57,9 +57,19 @@
 }
 ```
 
-## 運用方法
+## 導入方法
 
-1. このリポジトリの`master`ブランチの[_posts](https://github.com/c4w/disaster-information/tree/master/_posts)ディレクトリ内に[Jekyllの記事と同じフォーマット（.md）のファイル](https://github.com/c4w/disaster-information/blob/master/_posts/2016-04-18-example1.md)をpushしてください。
+1. このリポジトリをフォークしてください。
+2. [Travis CI](https://travis-ci.org/)にサインアップ。
+3. Travis CIでリポジトリを有効化。
+4. [アクセストークンを取得](https://github.com/settings/tokens)を取得。
+5. アクセストークンを[暗号化](https://docs.travis-ci.com/user/encryption-keys/)。
+6. `.travis.yml`を書き換え。
+7. GitHubにプッシュ。
+
+## 記事の投稿方法
+
+1. `master`ブランチの[_posts](https://github.com/c4w/disaster-information/tree/master/_posts)ディレクトリ内に[Jekyllの記事と同じフォーマット（.md）のファイル](https://github.com/c4w/disaster-information/blob/master/_posts/2016-04-18-example1.md)をpushしてください。またはGitHubの [New file] ボタンをクリックして`_posts`内に記事を作成してください。
 2. `master`ブランチに変更が加わるとTravis CIによって自動的にAPIとして利用可能なJSONファイルが生成されます。（ただし生成されるまでに数分かかります。）
 
 ## 仕組み

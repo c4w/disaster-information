@@ -2,10 +2,6 @@
 
 set -e
 
-USER_NAME="Travis CI"
-USER_EMAIL="miya+github.com@wpist.me"
-CNAME="api.c4w.jp"
-
 if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
 	echo "Not deploying pull requests."
 	exit
