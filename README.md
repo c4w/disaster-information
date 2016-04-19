@@ -29,7 +29,13 @@
 
 ## APIのエンドポイント
 
-http://api.c4w.jp/api/v1/pages.json
+* 言語一覧
+  * http://api.c4w.jp/api/v1/locale.json
+* 言語別
+  * 上記言語一覧に掲載されている各言語ごとのエンドポイント
+  * 例：
+    * 日本語(ja)： http://api.c4w.jp/api/v1/ja.json
+    * 英語(en)： http://api.c4w.jp/api/v1/en.json
 
 ## APIの出力例
 
@@ -53,7 +59,7 @@ http://api.c4w.jp/api/v1/pages.json
 
 ## 運用方法
 
-1. このリポジトリの`master`ブランチの[_posts](https://github.com/c4w/disaster-information/tree/master/_posts)ディレクトリ内に[Jekyllの記事と同じフォーマット（.md）のファイル](https://github.com/c4w/disaster-information/blob/master/_posts/2016-04-18-example.md)をpushしてください。
+1. このリポジトリの`master`ブランチの[_posts](https://github.com/c4w/disaster-information/tree/master/_posts)ディレクトリ内に[Jekyllの記事と同じフォーマット（.md）のファイル](https://github.com/c4w/disaster-information/blob/master/_posts/2016-04-18-example1.md)をpushしてください。
 2. `master`ブランチに変更が加わるとTravis CIによって自動的にAPIとして利用可能なJSONファイルが生成されます。（ただし生成されるまでに数分かかります。）
 
 ## 仕組み
