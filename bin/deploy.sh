@@ -2,6 +2,10 @@
 
 set -e
 
+USER_NAME="Travis CI"
+USER_EMAIL="miya+github.com@wpist.me"
+CNAME="api.c4w.jp"
+
 if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
 	echo "Not deploying pull requests."
 	exit
@@ -15,12 +19,12 @@ fi
 cd _site
 
 git init
-git config user.name "Travis CI"
-git config user.email "miya+github.com@wpist.me"
+git config user.name $USER_NAME
+git config user.email $USER_EMAIL
 git add api
 cp ../README.md ./
 git add README.md
-echo 'api.c4w.jp' > CNAME
+echo $CNAME > CNAME
 git add CNAME
 git commit --quiet -m "Deploy from travis"
 git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
