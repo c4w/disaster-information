@@ -62,7 +62,7 @@
 1. このリポジトリをフォークしてください。
 2. [Travis CI](https://travis-ci.org/)にサインアップ。
 3. Travis CIでリポジトリを有効化。
-4. [アクセストークンを取得](https://github.com/settings/tokens)を取得。
+4. アクセストークンを[取得](https://github.com/settings/tokens)。
 5. アクセストークンを[暗号化](https://docs.travis-ci.com/user/encryption-keys/)。
 6. `.travis.yml`を書き換え。
 7. GitHubにプッシュ。
