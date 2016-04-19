@@ -15,8 +15,8 @@ fi
 cd _site
 
 git init
-git config user.name $USER_NAME
-git config user.email $USER_EMAIL
+git config user.name $GIT_USER
+git config user.email $GIT_EMAIL
 git add api
 cp ../README.md ./
 git add README.md
