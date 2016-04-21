@@ -123,3 +123,7 @@ Or
 ```
 $ bundle exec jekyll build
 ```
+
+## ライセンス
+
+MIT
